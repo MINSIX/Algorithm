@@ -3,8 +3,7 @@
 using namespace std;
 const int INF = 1e9;
 
-long long ev[31][31];
-
+vector<vector<long long>>ev(31, vector<long long>(31, -1));
 
 long long dp(int W, int H) {
     if (W == 0 && H == 0)return 1;
@@ -22,9 +21,7 @@ int main() {
     cout.tie(NULL);
 
     int a;
-    for (int i = 0; i < 31; i++)
-        for (int j = 0; j < 31; j++)
-            ev[i][j] = -1;
+  
     dp(30 - 1, 1);
     cin >> a;
     while (a != 0) {
