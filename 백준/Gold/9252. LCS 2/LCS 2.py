@@ -1,8 +1,5 @@
-import sys
-input = sys.stdin.readline
-
-s = input().strip()
-b = input().strip()
+s = input()
+b = input()
 
 m = len(s)
 n = len(b)
