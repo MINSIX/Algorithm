@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int INF = 1000000;
+const int INF = 1e9;
 int N;
 int home[1001][3] = { 0, };
 int dp[1001][3] = { 0, };
