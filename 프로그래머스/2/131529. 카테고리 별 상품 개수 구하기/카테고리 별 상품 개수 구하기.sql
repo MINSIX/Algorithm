@@ -1,0 +1,6 @@
+-- 코드를 입력하세요
+SELECT left(PRODUCT_CODE,2) CATEGORY,
+COUNT(*) PRODUCTS
+from PRODUCT
+where 1=1
+GROUP BY left(PRODUCT_CODE,2)
