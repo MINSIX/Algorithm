@@ -1,0 +1,6 @@
+-- 코드를 입력하세요
+SELECT HOUR(DATETIME) as HOUR, COUNT(*) as COUNT
+from ANIMAL_OUTS
+where HOUR(DATETIME)BETWEEN 9 AND 20
+group by HOUR(DATETIME)
+order by HOUR
