@@ -5,6 +5,7 @@ vector<vector<int>>maze;
 vector<vector<int>>cnt;
 
 int N, M;
+
 int xx[4] = { -1,0,0,1 };
 int yy[4] = { 0,-1,1,0 };
 
@@ -18,7 +19,7 @@ int bfs() {
     while (!q.empty()) {
         int x = q.front().first;
         int y = q.front().second;
-        
+     
         q.pop();
         for(int i=0;i<4;i++){
             
@@ -34,7 +35,7 @@ int bfs() {
 
             if (maze[nowx][nowy] == 1 ) {
                 q.push({ nowx,nowy });
-                maze[nowx][nowy] = 0;
+                        maze[nowx][nowy] = 0;
                 cnt[nowx][nowy]=cnt[x][y]+1;
                }      
 
@@ -52,13 +53,13 @@ int main() {
     cout.tie(NULL);
     cin >> N >> M;
     maze.resize(N+1, vector<int>(M+1));
+
     cnt.resize(N + 1, vector<int>(M + 1, 0));
 
     int a;
-    char gg;
     for (int i = 1; i <= N; i++) {
         for (int j = 1; j <= M; j++) {
-          gg=cin.get();
+           char gg=cin.get();
             if(gg=='\n')
                 gg = cin.get();
             
