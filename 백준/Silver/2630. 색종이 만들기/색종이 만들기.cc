@@ -42,12 +42,11 @@ int main() {
 	cout.tie(nullptr);
 	cin >> n;
 
-	for (int i =1; i <= n; i++) {
-		for (int j = 1; j <= n; j++)
-			cin >> ar[i][j];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++)cin >> ar[i][j];
 	}
 
-	dc(1, 1, n);
+	dc(0, 0, n);
 
 	cout << wn << "\n";
 	cout << bn << "\n";
