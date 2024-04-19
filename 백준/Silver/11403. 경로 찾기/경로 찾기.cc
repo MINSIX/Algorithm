@@ -10,7 +10,7 @@ int main() {
 	cin.tie(nullptr);
 	cout.tie(nullptr);
 	cin >> N;
-	vector<vector<int>>arr(N + 1, vector<int>(N + 1,INF));
+	vector<vector<int>>arr(N + 1, vector<int>(N + 1, 0));
 
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++)
@@ -19,21 +19,15 @@ int main() {
 
 		}
 	}
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < N; j++)
-		{
-			if (arr[i][j] == 0)
-				arr[i][j] = INF;
 
-		}
-	}
 	for (int k = 0; k < N; k++) {
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++)
 			{
-			
-					arr[i][j] = min(arr[i][k] + arr[k][j], arr[i][j]);
-	
+
+				if (arr[i][k] > 0 && arr[k][j] > 0)
+					arr[i][j] = 1;
+
 
 			}
 		}
@@ -42,10 +36,10 @@ int main() {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 
-			if (arr[i][j] ==INF)
-				cout << 0<< " ";
-			else
+			if (arr[i][j] > 0)
 				cout << 1 << " ";
+			else
+				cout << 0 << " ";
 		}cout << endl;
 	}
 }
