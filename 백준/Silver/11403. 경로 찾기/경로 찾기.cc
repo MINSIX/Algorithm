@@ -36,10 +36,7 @@ int main() {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 
-			if (arr[i][j] > 0)
-				cout << 1 << " ";
-			else
-				cout << 0 << " ";
+			cout << arr[i][j] << " ";
 		}cout << endl;
 	}
 }
