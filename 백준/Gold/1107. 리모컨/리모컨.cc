@@ -38,11 +38,7 @@ int main() {
                     index = i;
                 }
             }
-            else if (i == n) {
-                mini = 0;
-                index = i;
-            }
-            else {
+           else {
                 if (mini > i - n) {
                     mini = i - n;
                     index = i;
