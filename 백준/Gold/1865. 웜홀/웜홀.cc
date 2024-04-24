@@ -1,16 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-typedef tuple<int, int, int> ti;
-
+int TC;
+const int INF = 99999;
 int N, M, W;
-vector<ti> edges;
-vector<long long> dist;
-const long long INF = 1e9;
-
+vector < tuple<int, int, int>>arr;
+vector<long long>dist;
 void solve() {
     for (int i = 1; i <= N; i++) {
-        for (auto e : edges) {
+        for (auto e : arr) {
             int a, b, weight;
             tie(a, b, weight) = e;
             if (dist[b] > dist[a] + weight) {
@@ -24,29 +21,35 @@ void solve() {
     }
     cout << "NO" << '\n';
 }
-
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-    int TC;
     cin >> TC;
-    while (TC--) {
-        cin >> N >> M >> W;
+    while (TC-- > 0) {
 
-        int a, b, weight;
-        edges.clear();
+        cin >> N >> M >> W;
+        int s, e, t;
+        arr.clear();
         dist.resize(N + 1);
+
+
         for (int i = 0; i < M; i++) {
-            cin >> a >> b >> weight;
-            edges.push_back(make_tuple(a, b, weight));
-            edges.push_back(make_tuple(b, a, weight));
+            cin >> s >> e >> t;
+            arr.push_back(make_tuple( s,e,t ));
+            arr.push_back(make_tuple(e, s, t));
+
+
+
         }
         for (int i = 0; i < W; i++) {
-            cin >> a >> b >> weight;
-            edges.push_back(make_tuple(a, b, -weight));
+            cin >> s >> e >> t;
+            arr.push_back(make_tuple(s, e, -t));
         }
+
         solve();
+
+
     }
-    return 0;
+
 }
