@@ -12,13 +12,16 @@ int main() {
         
        
             cin >> M >> N;
-            
+            int cha = K - max(M, N);
+            int diff = abs(M - N);
+
+
             if (M > N) {
-                if (M - N - 1<= N + K + 1 - M)cout << 1 << '\n';
+                if (diff-cha<=2)cout << 1 << '\n';
                 else cout << 0 << '\n';
             }
             else if (M < N) {
-                if (N - M - 1 < K - N + 1)cout << 1 << '\n';
+                if (diff-cha<2)cout << 1 << '\n';
                 else cout << 0 << '\n';
             }
             else {
