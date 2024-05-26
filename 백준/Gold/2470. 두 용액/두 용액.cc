@@ -16,7 +16,7 @@ int main() {
     sort(arr.begin(), arr.end());
 
     int stst, eded;
-    int nowval = 2000000001;
+    int nowval = INT32_MAX;
       int st = 0;
         int ed = N - 1;
         while (st < ed) {
