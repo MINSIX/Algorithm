@@ -42,7 +42,7 @@ int main() {
             j = pi[j];
         }
     }
-    cout << cnt << "\n";
+    cout << cnt << endl;
     for (auto i : idx) {
         cout << i << " ";
 
