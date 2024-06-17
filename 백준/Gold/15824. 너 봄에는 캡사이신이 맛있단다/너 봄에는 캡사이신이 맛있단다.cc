@@ -18,19 +18,15 @@ int main() {
 
     sort(arr.begin(), arr.end());
 
-    long long sum = 0;
     vector<long long> powerOfTwo(N, 1);
-
     for (int i = 1; i < N; ++i) {
-        powerOfTwo[i] = (powerOfTwo[i - 1] * 2) % MOD;  //2의 지수저장
+        powerOfTwo[i] = (powerOfTwo[i - 1] * 2) % MOD;  // 2의 지수 저장
     }
 
-    for (int st = 0; st < N; st++) {
-        for (int ed = st + 1; ed < N; ed++) {
-            long long cal = (arr[ed] - arr[st]) % MOD;
-            long long cal2 = (cal * powerOfTwo[ed - st - 1]) % MOD;
-            sum = (sum + cal2) % MOD;
-        }
+    long long sum = 0;
+
+    for (int i = 0; i < N; ++i) {
+        sum = (sum + arr[i] * (powerOfTwo[i] - powerOfTwo[N - i - 1] + MOD)) % MOD;
     }
 
     cout << sum << endl;
