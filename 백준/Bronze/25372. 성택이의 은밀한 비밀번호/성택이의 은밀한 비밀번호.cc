@@ -1,18 +1,3 @@
-#include<bits/stdc++.h>
+#import<iostream>
 using namespace std;
-
-int main(){
-  
-  
- int T;
- cin >> T;
- while(T--){
-   string s;
-   cin >> s;
-   if(s.length()>=6&&s.length()<=9)
-   cout << "yes\n";
-   else
-   cout << "no\n";
- }
-}
-  
+string s;main(int n){for(cin>>s;cin>>s;puts(s.length()>5&&s.length()<10?"yes":"no"));}
