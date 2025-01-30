@@ -45,7 +45,7 @@ int main(){
     int nowval = q.front().cnt;
     q.pop();
 
-    if(nowval >=10) continue;
+    if(nowval >=10) break;
 
     for(int i=0;i<4;i++){
       int xx = nowx;
