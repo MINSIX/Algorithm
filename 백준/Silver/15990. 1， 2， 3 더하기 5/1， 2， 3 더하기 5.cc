@@ -30,9 +30,6 @@ int main(){
   while(T--){
     int N;
     cin >> N;
-    if(N<3)
-    cout << 1<<"\n";
-    else
     cout << (arr[N][1]+arr[N][2]+arr[N][3])%MOD<<"\n";
     
   }
