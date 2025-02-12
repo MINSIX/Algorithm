@@ -8,17 +8,15 @@ int main(){
   cin >>S>>T;
   
   while(S.size()<T.size()){
-    if (T.back() == 'A') T.pop_back();
-    else {
-      T.pop_back();
-      reverse(T.begin(), T.end());
-      }
-
+    char lastChar = T.back(); 
+    T.pop_back();
+    if(lastChar=='B')
+    reverse(T.begin(),T.end());
+    
+  
     
   }
-  if(S==T)cout<<1;
-  else
-  cout<<0;
+    cout << (S == T ? 1 : 0) ;
   
   
 }
