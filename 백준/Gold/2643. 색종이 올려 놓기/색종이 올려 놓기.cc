@@ -29,14 +29,14 @@ int main(){
 
     for(int j=i+1;j<N;j++){
       
-     if(arr[j].first <= arr[i].first && arr[j].second <= arr[i].second){
+      if(arr[j].first<=arr[i].first&&arr[j].second<=arr[i].second){
         
-        dp[j] = max(dp[j], dp[i] + 1);
-        cnt = max(cnt, dp[j]);
+        dp[j]=max(dp[j],dp[i]+1);
+        cnt=max(cnt,dp[j]);
       }
       
       
     }
   }
-  cout <<cnt;
+  cout << cnt;
 }
