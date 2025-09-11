@@ -23,7 +23,7 @@ int main(){
     sum+=arr[i];
   }
   double avg = (double)sum / (double)N;
-  cout << (long long)llround(avg) << "\n";
+  cout << (long long)round(avg) << "\n";
   sort(arr.begin(),arr.end());
   cout << arr[N/2]<<endl;
   
